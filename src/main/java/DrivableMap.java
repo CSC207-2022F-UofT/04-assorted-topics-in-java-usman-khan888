@@ -61,13 +61,13 @@ class DrivableMap {
      *       drivable_map.
      */
 
-    public List<Drivable> getTradable(){
-        ArrayList<Drivable> tradable = new ArrayList<Drivable>();
+    public List<Tradable> getTradable(){
+        ArrayList<Tradable> tradable = new ArrayList<Tradable>();
         for(String key : drivable_map.keySet()){
             if(drivable_map.get(key) instanceof Tradable){
-                tradable.add(drivable_map.get(key));
+                tradable.add((Tradable) drivable_map.get(key));
             }
         }
-        return(tradable);
+        return tradable;
     }
 }
